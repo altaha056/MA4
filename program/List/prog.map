@@ -9,3 +9,5 @@ Variable                                                          Address   Size
 Register Allocation
 Variable                                                          Register  Size
 --------------------------------------------------------------------------------
+detik                                                             R4,R5        2
+i                                                                 R6,R7        2

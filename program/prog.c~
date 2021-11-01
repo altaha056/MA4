@@ -22,7 +22,8 @@ Data Stack size         : 512
 *****************************************************/
 
 #include <mega32.h>
-
+#include <delay.h>
+int detik,i=0;
 // Declare your global variables here
 
 void main(void)
@@ -130,7 +131,10 @@ TWCR=0x00;
 
 while (1)
       {
-      // Place your code here
-
+        for(i=0;i<60;i++){
+            
+            PORTC=i;  
+            delay_ms(30);         
+        }
       }
 }

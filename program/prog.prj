@@ -109,7 +109,7 @@ WarningExternalDeclaredNeverDefined=1
 WarningUnknownPragma=1
 DebugBootLoader=0
 WatchAVR8LAutoVariables=0
-Build=2
+Build=6
 UseEEPROMLocation0=1
 [Assembler]
 OutputFormat=1
@@ -193,6 +193,7 @@ RunUserProg=0
 Files=1
 F1=C:\Users\Altaha\Downloads\modul 4\program\prog.c
 [Header1]
-Files=2
+Files=3
 F1=C:\cvavr2\inc\mega32.h
 F2=C:\cvavr2\inc\mega32_bits.h
+F3=C:\cvavr2\inc\delay.h
