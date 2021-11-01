@@ -1,6 +1,7 @@
 RAM Allocation
 Variable                                                          Address   Size
 --------------------------------------------------------------------------------
+angka                                                             0x0260      60
 
 EEPROM Allocation
 Variable                                                          Address   Size
@@ -10,4 +11,5 @@ Register Allocation
 Variable                                                          Register  Size
 --------------------------------------------------------------------------------
 detik                                                             R4,R5        2
-i                                                                 R6,R7        2
+menit                                                             R6,R7        2
+jam                                                               R8,R9        2
