@@ -32,6 +32,17 @@ char angka[60]={
 0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,
 0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59};
 // Declare your global variables here
+
+void ubahjam(){
+    if(PINA.0==0){
+    jam++;
+    PORTB=angka[jam];
+    }
+    if(PINA.4==0){
+    jam--;
+    PORTB=angka[jam];
+    }
+}
 void main(void)
 {
 // Declare your local variables here
@@ -40,14 +51,14 @@ void main(void)
 // Port A initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
-PORTA=0x00;
+PORTA=0xff;
 DDRA=0x00;
 
 // Port B initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
 // State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTB=0x00;
-DDRB=0x00;
+DDRB=0xff;
 
 // Port C initialization
 // Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
@@ -142,8 +153,18 @@ while (1)
             menit++;
             PORTD=angka[menit];
         }
+        if(menit==60){
+            menit=0;
+            jam++;
+            PORTB=angka[jam];
+        }
+        if(jam==24){
+            jam=0;
+            PORTB=angka[jam];
+        }
         PORTC=angka[detik];
         detik++;
         delay_ms(20);
+        ubahjam();
       }
 }
